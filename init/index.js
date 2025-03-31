@@ -17,10 +17,10 @@ async function main() {
 }
 
 const initDB = async () => {
-  // Update each listing so that the image field is only the URL string.
-  initData.data.forEach((listing) => {
-      listing.image = listing.image.url;
-  });
+  // // Update each listing so that the image field is only the URL string.
+  // initData.data.forEach((listing) => {
+  //     listing.image = listing.image.url;
+  // });
   await Listing.deleteMany({});
   initData.data = initData.data.map((obj) => ({ ...obj, owner: "67d718daf95755206e672455" }));
   await Listing.insertMany(initData.data);

@@ -6,19 +6,21 @@ const { isLoggedIn, isOwner, validateListing } = require("../middleware");
 
 const listingController = require("../controllers/listings");
 const multer  = require('multer');
-const upload = multer({ dest: 'uploads/' });
+const { storage } = require("../cloudConfig");
+const upload = multer({ storage }); // multer will store the files in the cloudinary storage
 
 router
   .route("/")  // Index Route
   .get(wrapAsync(listingController.index)) 
-  // .post(  // Create Route
-  //   isLoggedIn,
-  //   validateListing,
-  //   wrapAsync(listingController.createListing)
-  // );
-  .post(upload.single('listing[image]'), (req , res) => {
-    res.send(req.file);
-  });
+  .post(  // Create Route
+    isLoggedIn,
+    upload.single('listing[image]'),
+    validateListing,
+    wrapAsync(listingController.createListing)
+  );
+  // .post(upload.single('listing[image]'), (req , res) => {
+  //   res.send(req.file);
+  // });
 
 // New Route
 router.get("/new", isLoggedIn, listingController.renderNewForm);
@@ -29,6 +31,7 @@ router
   .put(  // Update Route
     isLoggedIn,
     isOwner,
+    upload.single('listing[image]'),
     validateListing,
     wrapAsync(listingController.updateListing)
   )  // Delete Route
