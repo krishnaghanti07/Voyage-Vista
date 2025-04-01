@@ -53,9 +53,9 @@ const sessionOptions = {
   }
 };
 
-app.get("/", (req, res) => {
-  res.send("Hii There.. , I am Root...!!");
-});
+// app.get("/", (req, res) => {
+//   res.send("Hii There.. , I am Root...!!");
+// });
 
 // using Session & flash in our app
 app.use(session(sessionOptions));
