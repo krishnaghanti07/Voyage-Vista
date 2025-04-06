@@ -4,8 +4,25 @@ const mapToken = process.env.MAP_TOKEN;
 const geocodingClient = mbxGeocoding({ accessToken: mapToken });
 
 module.exports.index = async (req, res) => {
-  let allListings = await Listing.find({});
+  const { category } = req.query; // Extract category from query params
+  let filter = {}; // Default: No filter applied
+
+  if (category) {
+      filter.category = category; // Apply filter only if category is selected
+  }
+
+  // console.log(filter);
+  let allListings = await Listing.find(filter); // Fetch listings based on filter
+
+  // If no listings are found, fetch all listings instead
+  if (allListings.length === 0) {
+      allListings = await Listing.find({});
+  }
+
   res.render("listings/index.ejs", { allListings });
+
+  // let allListings = await Listing.find({});
+  // res.render("listings/index.ejs", { allListings });
 };
 
 module.exports.renderNewForm = (req, res) => {
@@ -36,6 +53,7 @@ module.exports.createListing = async (req, res, next) => {
 
   // console.log(response.body.features[0].geometry);
   // res.send("Done..!!");
+  // console.log(req.body);
 
   let url = req.file.path;
   let filename = req.file.filename;
@@ -50,23 +68,11 @@ module.exports.createListing = async (req, res, next) => {
   newListing.geometry = response.body.features[0].geometry;
 
   let savedListing = await newListing.save();
-  console.log(savedListing);
+  // console.log(savedListing);
   // console.log(listing);
   req.flash("success", "New Listing Created..!");
-  res.redirect("/listings");
-};
+  res.redirect("/listings");  
 
-module.exports.renderEditForm = async (req, res) => {
-  let { id } = req.params;
-  const listing = await Listing.findById(id);
-  if (!listing) {
-    req.flash("error", "Listing you requested for does not exist..!");
-    res.redirect("/listings");
-  }
-
-  let originalImageUrl = listing.image.url;
-  originalImageUrl = originalImageUrl.replace("/upload", "/upload/w_350");
-  res.render("listings/edit.ejs", { listing, originalImageUrl });
 };
 
 module.exports.updateListing = async (req, res) => {

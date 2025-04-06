@@ -35,7 +35,21 @@ const listingSchema = new Schema ({
             type: [Number],
             required: true
         }
-    }
+    } ,
+    category: {
+        type: String,
+        enum: [
+            "trending", "luxury",
+            "treehouse", "boathouse",
+            "mountains", "forest", "jungle-lodges", "desert", "beachfront", "island",
+            "historical", "temple-stays", "monasteries", "castles",
+            "camping", "safari", "haunted-houses", "floating-house", "futuristic", 
+            "underwater", "budget-friendly", "volcano-view", "skyline-view", "ice-hotel", "cave-hotel",
+            "eco-lodges", "wellness", "off-grid"
+        ],
+        required: true, // Ensure that category is always provided
+        default: "trending" // Ensures every listing has a category
+    },
 });
 
 listingSchema.post("findOneAndDelete" , async (listing) => {

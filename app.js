@@ -90,6 +90,7 @@ app.use((req , res , next) => {
 //   res.send(registeredUser) ;
 // });
 
+
 // seperate the routing logic of "Listings" & "Reviews"  from the app.js (using as middleware)
 app.use("/listings" , listingRouter);
 app.use("/listings/:id/reviews" , reviewRouter);

@@ -10,6 +10,11 @@ const sampleListings = [
     price: 1500,
     location: "Malibu",
     country: "United States",
+    geometry: {
+      type: "Point",
+      coordinates: [-118.7798, 34.0259],
+    },
+    category: "beachfront",
   },
   {
     title: "Modern Loft in Downtown",
@@ -22,6 +27,11 @@ const sampleListings = [
     price: 1200,
     location: "New York City",
     country: "United States",
+    geometry: {
+      type: "Point",
+      coordinates: [-74.006, 40.7128],
+    },
+    category: "skyline-view",
   },
   {
     title: "Mountain Retreat",
@@ -34,6 +44,11 @@ const sampleListings = [
     price: 1000,
     location: "Aspen",
     country: "United States",
+    geometry: {
+      type: "Point",
+      coordinates: [-106.8175, 39.1911],
+    },
+    category: "mountains",
   },
   {
     title: "Historic Villa in Tuscany",
@@ -46,6 +61,11 @@ const sampleListings = [
     price: 2500,
     location: "Florence",
     country: "Italy",
+    geometry: {
+      type: "Point",
+      coordinates: [11.2558, 43.7696],
+    },
+    category: "historical",
   },
   {
     title: "Secluded Treehouse Getaway",
@@ -58,6 +78,11 @@ const sampleListings = [
     price: 800,
     location: "Portland",
     country: "United States",
+    geometry: {
+      type: "Point",
+      coordinates: [-122.6784, 45.5152],
+    },
+    category: "treehouse",
   },
   {
     title: "Beachfront Paradise",
@@ -70,6 +95,11 @@ const sampleListings = [
     price: 2000,
     location: "Cancun",
     country: "Mexico",
+    geometry: {
+      type: "Point",
+      coordinates: [-86.8515, 21.1619],
+    },
+    category: "beachfront",
   },
   {
     title: "Rustic Cabin by the Lake",
@@ -82,6 +112,11 @@ const sampleListings = [
     price: 900,
     location: "Lake Tahoe",
     country: "United States",
+    geometry: {
+      type: "Point",
+      coordinates: [-120.0324, 39.0968],
+    },
+    category: "forest",
   },
   {
     title: "Luxury Penthouse with City Views",
@@ -94,6 +129,11 @@ const sampleListings = [
     price: 3500,
     location: "Los Angeles",
     country: "United States",
+    geometry: {
+      type: "Point",
+      coordinates: [-118.2437, 34.0522],
+    },
+    category: "skyline-view",
   },
   {
     title: "Ski-In/Ski-Out Chalet",
@@ -106,6 +146,11 @@ const sampleListings = [
     price: 3000,
     location: "Verbier",
     country: "Switzerland",
+    geometry: {
+      type: "Point",
+      coordinates: [7.2268, 46.1006],
+    },
+    category: "mountains",
   },
   {
     title: "Safari Lodge in the Serengeti",
@@ -118,6 +163,11 @@ const sampleListings = [
     price: 4000,
     location: "Serengeti National Park",
     country: "Tanzania",
+    geometry: {
+      type: "Point",
+      coordinates: [34.8333, -2.3333],
+    },
+    category: "safari",
   },
   {
     title: "Historic Canal House",
@@ -130,6 +180,11 @@ const sampleListings = [
     price: 1800,
     location: "Amsterdam",
     country: "Netherlands",
+    geometry: {
+      type: "Point",
+      coordinates: [4.9041, 52.3676],
+    },
+    category: "historical",
   },
   {
     title: "Private Island Retreat",
@@ -142,6 +197,11 @@ const sampleListings = [
     price: 10000,
     location: "Fiji",
     country: "Fiji",
+    geometry: {
+      type: "Point",
+      coordinates: [178.065, -17.7134],
+    },
+    category: "island",
   },
   {
     title: "Charming Cottage in the Cotswolds",
@@ -154,6 +214,11 @@ const sampleListings = [
     price: 1200,
     location: "Cotswolds",
     country: "United Kingdom",
+    geometry: {
+      type: "Point",
+      coordinates: [-1.8433, 51.833],
+    },
+    category: "historical",
   },
   {
     title: "Historic Brownstone in Boston",
@@ -166,6 +231,11 @@ const sampleListings = [
     price: 2200,
     location: "Boston",
     country: "United States",
+    geometry: {
+      type: "Point",
+      coordinates: [-71.0589, 42.3601],
+    },
+    category: "historical",
   },
   {
     title: "Beachfront Bungalow in Bali",
@@ -178,6 +248,11 @@ const sampleListings = [
     price: 1800,
     location: "Bali",
     country: "Indonesia",
+    geometry: {
+      type: "Point",
+      coordinates: [115.092, -8.3405],
+    },
+    category: "beachfront",
   },
   {
     title: "Mountain View Cabin in Banff",
@@ -190,6 +265,11 @@ const sampleListings = [
     price: 1500,
     location: "Banff",
     country: "Canada",
+    geometry: {
+      type: "Point",
+      coordinates: [-115.5708, 51.1784],
+    },
+    category: "mountains",
   },
   {
     title: "Art Deco Apartment in Miami",
@@ -202,6 +282,11 @@ const sampleListings = [
     price: 1600,
     location: "Miami",
     country: "United States",
+    geometry: {
+      type: "Point",
+      coordinates: [-80.1918, 25.7617],
+    },
+    category: "historical",
   },
   {
     title: "Tropical Villa in Phuket",
@@ -214,6 +299,11 @@ const sampleListings = [
     price: 3000,
     location: "Phuket",
     country: "Thailand",
+    geometry: {
+      type: "Point",
+      coordinates: [98.3923, 7.8804],
+    },
+    category: "luxury",
   },
   {
     title: "Historic Castle in Scotland",
@@ -226,6 +316,11 @@ const sampleListings = [
     price: 4000,
     location: "Scottish Highlands",
     country: "United Kingdom",
+    geometry: {
+      type: "Point",
+      coordinates: [-4.71, 57.12],
+    },
+    category: "castles",
   },
   {
     title: "Desert Oasis in Dubai",
@@ -238,6 +333,11 @@ const sampleListings = [
     price: 5000,
     location: "Dubai",
     country: "United Arab Emirates",
+    geometry: {
+      type: "Point",
+      coordinates: [55.2962, 25.2769],
+    },
+    category: "desert",
   },
   {
     title: "Rustic Log Cabin in Montana",
@@ -250,6 +350,11 @@ const sampleListings = [
     price: 1100,
     location: "Montana",
     country: "United States",
+    geometry: {
+      type: "Point",
+      coordinates: [-110.3626, 46.8797],
+    },
+    category: "forest",
   },
   {
     title: "Beachfront Villa in Greece",
@@ -262,6 +367,11 @@ const sampleListings = [
     price: 2500,
     location: "Mykonos",
     country: "Greece",
+    geometry: {
+      type: "Point",
+      coordinates: [25.3289, 37.4467],
+    },
+    category: "beachfront",
   },
   {
     title: "Eco-Friendly Treehouse Retreat",
@@ -274,6 +384,11 @@ const sampleListings = [
     price: 750,
     location: "Costa Rica",
     country: "Costa Rica",
+    geometry: {
+      type: "Point",
+      coordinates: [-83.7534, 9.7489],
+    },
+    category: "eco-lodges",
   },
   {
     title: "Historic Cottage in Charleston",
@@ -286,6 +401,11 @@ const sampleListings = [
     price: 1600,
     location: "Charleston",
     country: "United States",
+    geometry: {
+      type: "Point",
+      coordinates: [-79.9311, 32.7765],
+    },
+    category: "historical",
   },
   {
     title: "Modern Apartment in Tokyo",
@@ -298,6 +418,11 @@ const sampleListings = [
     price: 2000,
     location: "Tokyo",
     country: "Japan",
+    geometry: {
+      type: "Point",
+      coordinates: [139.6503, 35.6762],
+    },
+    category: "skyline-view",
   },
   {
     title: "Lakefront Cabin in New Hampshire",
@@ -310,6 +435,11 @@ const sampleListings = [
     price: 1200,
     location: "New Hampshire",
     country: "United States",
+    geometry: {
+      type: "Point",
+      coordinates: [-71.5724, 43.1939],
+    },
+    category: "forest",
   },
   {
     title: "Luxury Villa in the Maldives",
@@ -322,6 +452,11 @@ const sampleListings = [
     price: 6000,
     location: "Maldives",
     country: "Maldives",
+    geometry: {
+      type: "Point",
+      coordinates: [73.2207, 3.2028],
+    },
+    category: "luxury",
   },
   {
     title: "Ski Chalet in Aspen",
@@ -334,6 +469,11 @@ const sampleListings = [
     price: 4000,
     location: "Aspen",
     country: "United States",
+    geometry: {
+      type: "Point",
+      coordinates: [-106.8175, 39.1911],
+    },
+    category: "mountains",
   },
   {
     title: "Secluded Beach House in Costa Rica",
@@ -346,6 +486,712 @@ const sampleListings = [
     price: 1800,
     location: "Costa Rica",
     country: "Costa Rica",
+    geometry: {
+      type: "Point",
+      coordinates: [-84.7534, 9.7489],
+    },
+    category: "beachfront",
+  },
+  {
+    title: "Floating Glass House in Swedish Archipelago",
+    description:
+      "Experience Nordic minimalism in this architect-designed floating home surrounded by Baltic Sea islands. Perfect for digital detox.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1580048915913-4f8f5cb481c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZmxvYXRpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 2800,
+    location: "Stockholm Archipelago",
+    country: "Sweden",
+    geometry: {
+      type: "Point",
+      coordinates: [18.6435, 59.3251],
+    },
+    category: "floating-house",
+  },
+  {
+    title: "Ancient Temple Stay in Kyoto",
+    description:
+      "Participate in Zen Buddhist practices at this 14th-century temple. Includes meditation sessions and shojin ryori vegetarian cuisine.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHRlbXBsZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 120,
+    location: "Kyoto",
+    country: "Japan",
+    geometry: {
+      type: "Point",
+      coordinates: [135.7681, 35.0116],
+    },
+    category: "temple-stays",
+  },
+  {
+    title: "Solar-Powered Ice Hotel",
+    description:
+      "Sleep in artist-carved ice suites at this eco-friendly hotel rebuilt annually with glacial water. Includes thermal sleeping bags and sauna access.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1516550893923-42d28e5677af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aWNlfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 450,
+    location: "Jukkasjärvi",
+    country: "Sweden",
+    geometry: {
+      type: "Point",
+      coordinates: [20.6413, 67.8545],
+    },
+    category: "ice-hotel",
+  },
+  {
+    title: "Cliffside Cave Hotel",
+    description:
+      "Carved into volcanic rock, these climate-controlled cave suites offer panoramic Mediterranean views and private plunge pools.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1610500796385-3ffc1ae2f906?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2F2ZSUyMGhvdGVsfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 3200,
+    location: "Cappadocia",
+    country: "Turkey",
+    geometry: {
+      type: "Point",
+      coordinates: [34.8588, 38.6432],
+    },
+    category: "cave-hotel",
+  },
+  {
+    title: "Volcano-View Bamboo Eco Lodge",
+    description:
+      "Sustainable bamboo villas with direct views of active lava flows. Includes guided volcanic landscape hikes.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1588666309990-d68f08e3d4a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dm9sY2Fub3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 890,
+    location: "Puna District",
+    country: "Hawaii, USA",
+    geometry: {
+      type: "Point",
+      coordinates: [-155.083, 19.4194],
+    },
+    category: "volcano-view",
+  },
+  {
+    title: "Haunted Victorian Mansion",
+    description:
+      "Paranormal enthusiasts welcome! Stay in this documented haunted 1889 mansion with original furnishings. Night vision cameras included.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1576091160558-5a0abfc78f9b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGhhdW50ZWR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 85,
+    location: "Transylvania",
+    country: "Romania",
+    geometry: {
+      type: "Point",
+      coordinates: [24.9731, 46.2183],
+    },
+    category: "haunted-houses",
+  },
+  {
+    title: "Futuristic Space Pod Hostel",
+    description:
+      "Experience Mars colony living in these soundproofed space pod beds with VR windows and anti-gravity simulation.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1531053326607-9d349096d887?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGZ1dHVyaXN0aWN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 65,
+    location: "Oslo",
+    country: "Norway",
+    geometry: {
+      type: "Point",
+      coordinates: [10.7522, 59.9139],
+    },
+    category: "futuristic",
+  },
+  {
+    title: "Underwater Marine Observatory",
+    description:
+      "Sleep surrounded by tropical fish in this submerged suite with 360° acrylic walls. Includes scuba gear and marine biologist-led tours.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1571997478779-1ad6736bedca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dW5kZXJ3YXRlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 5500,
+    location: "Maldives",
+    country: "Maldives",
+    geometry: {
+      type: "Point",
+      coordinates: [73.5123, 4.1755],
+    },
+    category: "underwater",
+  },
+  {
+    title: "Mongolian Yurt Camp",
+    description:
+      "Authentic nomadic experience with horseback riding and eagle hunting demonstrations. Includes traditional throat singing performances.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1582564286939-1a5ba8aed874?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHlvcnR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 75,
+    location: "Gobi Desert",
+    country: "Mongolia",
+    geometry: {
+      type: "Point",
+      coordinates: [104.2861, 43.6702],
+    },
+    category: "camping",
+  },
+  {
+    title: "Converted Lighthouse Boathouse",
+    description:
+      "19th-century lighthouse with private boat dock and rotating lantern room. Perfect for maritime history enthusiasts.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJvYXRob3VzZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 2100,
+    location: "Maine Coast",
+    country: "United States",
+    geometry: {
+      type: "Point",
+      coordinates: [-68.2039, 44.3922],
+    },
+    category: "boathouse",
+  },
+  {
+    title: "Ayurvedic Wellness Ashram",
+    description:
+      "30-day panchakarma detox programs with daily yoga, meditation, and organic sattvic meals. Medical staff supervision included.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1603989872380-0d1d1ac9c9bd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHdlbGxuZXNzfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 4200,
+    location: "Kerala",
+    country: "India",
+    geometry: {
+      type: "Point",
+      coordinates: [76.2673, 10.8505],
+    },
+    category: "wellness",
+  },
+  {
+    title: "Off-Grid Earthship Home",
+    description:
+      "Fully self-sufficient solar home built from recycled tires and bottles. Rainwater harvesting and food production systems included.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1605146769289-440113cc3d00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG9mZiUyMGdyaWR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 95,
+    location: "Taos",
+    country: "United States",
+    geometry: {
+      type: "Point",
+      coordinates: [-105.573, 36.4072],
+    },
+    category: "off-grid",
+  },
+  {
+    title: "Jungle Canopy Zip-Line Lodge",
+    description:
+      "Treetop cabins accessible only by zip-line. Includes night jungle safaris and waterfall rappelling adventures.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGp1bmdsZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 680,
+    location: "Monteverde Cloud Forest",
+    country: "Costa Rica",
+    geometry: {
+      type: "Point",
+      coordinates: [-84.7764, 10.3157],
+    },
+    category: "jungle-lodges",
+  },
+  {
+    title: "Budget Artist Collective Hostel",
+    description:
+      "Creative dorm-style accommodation with mural painting workshops and nightly live music. Includes free breakfast buffet.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1501183638710-841dd1904471?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGhvc3RlbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 28,
+    location: "Berlin",
+    country: "Germany",
+    geometry: {
+      type: "Point",
+      coordinates: [13.4049, 52.52],
+    },
+    category: "budget-friendly",
+  },
+  {
+    title: "Silent Monastery Cell",
+    description:
+      "Experience monastic life in this 15th-century mountain monastery. Guests participate in daily prayer services and maintain silence.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1582201943021-e8e5cb6dedc2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG1vbmFzdGVyeXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 45,
+    location: "Bhutan Himalayas",
+    country: "Bhutan",
+    geometry: {
+      type: "Point",
+      coordinates: [89.6393, 27.4728],
+    },
+    category: "monasteries",
+  },
+  {
+    title: "Viral Glass Cliff House",
+    description:
+      "Instagram-famous transparent cantilevered house over Norwegian fjord with 360° views. Featured in Architectural Digest.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dHJlbmRpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 4200,
+    location: "Geirangerfjord",
+    country: "Norway",
+    geometry: { type: "Point", coordinates: [7.206, 62.1015] },
+    category: "trending",
+  },
+
+  // Luxury
+  {
+    title: "24K Gold-Plated Penthouse",
+    description:
+      "Ultra-luxurious Dubai penthouse with gold fixtures, private helipad, and champagne waterfall.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1565538810643-b5bdb714032a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGx1eHVyeSUyMHBlbnRob3VzZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 25000,
+    location: "Dubai Marina",
+    country: "UAE",
+    geometry: { type: "Point", coordinates: [55.1381, 25.0759] },
+    category: "luxury",
+  },
+
+  // Treehouse
+  {
+    title: "Ancient Redwood Canopy Suite",
+    description:
+      "Sustainable treehouse complex built around 2000-year-old redwoods with suspension bridges.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1590490359685-ffe156a53e16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHRyZWVob3VzZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 890,
+    location: "Redwood National Park",
+    country: "USA",
+    geometry: { type: "Point", coordinates: [-124.0, 41.2132] },
+    category: "treehouse",
+  },
+
+  // Boathouse
+  {
+    title: "Historic Thames Houseboat",
+    description:
+      "Fully renovated 1930s paddle steamer moored in central London with rooftop terrace.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1570129474311-0e0d1d06a8cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJvYXRob3VzZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 650,
+    location: "London",
+    country: "UK",
+    geometry: { type: "Point", coordinates: [-0.1276, 51.5072] },
+    category: "boathouse",
+  },
+
+  // Mountains
+  {
+    title: "Alpine A-Frame Cabin",
+    description:
+      "Chalet-style cabin with direct ski-out access to Swiss Alpine slopes. Heated boot warmers included.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1584132960623-9d2edd287f10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG1vdW50YWluJTIwY2FiaW58ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 1450,
+    location: "Zermatt",
+    country: "Switzerland",
+    geometry: { type: "Point", coordinates: [7.7481, 46.0207] },
+    category: "mountains",
+  },
+
+  // Forest
+  {
+    title: "Moss-Covered Forest Dome",
+    description:
+      "Geodesic glass dome hidden in ancient woodland with outdoor cedar hot tub.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGZvcmVzdHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 320,
+    location: "Black Forest",
+    country: "Germany",
+    geometry: { type: "Point", coordinates: [8.1667, 48.1667] },
+    category: "forest",
+  },
+
+  // Jungle Lodges
+  {
+    title: "Amazon Canopy Walk Lodge",
+    description:
+      "Network of elevated lodges connected by suspension bridges through primary rainforest.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGp1bmdsZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 780,
+    location: "Manu National Park",
+    country: "Peru",
+    geometry: { type: "Point", coordinates: [-71.6897, -11.8545] },
+    category: "jungle-lodges",
+  },
+
+  // Desert
+  {
+    title: "Mars Simulation Habitat",
+    description:
+      "Experience Martian living in this NASA-designed desert research station. Includes space suit rentals.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1584132960623-9d2edd287f10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGRlc2VydHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 1500,
+    location: "Atacama Desert",
+    country: "Chile",
+    geometry: { type: "Point", coordinates: [-69.2878, -23.8367] },
+    category: "desert",
+  },
+
+  // Beachfront
+  {
+    title: "Overwater Polynesian Bungalow",
+    description:
+      "Traditional thatched villa on stilts above turquoise lagoon. Glass floor panels for marine viewing.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1584132960623-9d2edd287f10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJlYWNocmVvbnR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 2900,
+    location: "Bora Bora",
+    country: "French Polynesia",
+    geometry: { type: "Point", coordinates: [-151.742, -16.5004] },
+    category: "beachfront",
+  },
+
+  // Island
+  {
+    title: "Private Atoll Resort",
+    description:
+      "Entire coral atoll rental with staff of 20. Includes private airstrip and research submarine.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1584132960623-9d2edd287f10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGlzbGFuZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 75000,
+    location: "Seychelles",
+    country: "Seychelles",
+    geometry: { type: "Point", coordinates: [55.5364, -4.6796] },
+    category: "island",
+  },
+
+  // Historical
+  {
+    title: "Restored Roman Villa",
+    description:
+      "Live like a patrician in this meticulously restored 2nd-century villa with original mosaics.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1584132960623-9d2edd287f10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGhpc3RvcmljYWx8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 4500,
+    location: "Pompeii",
+    country: "Italy",
+    geometry: { type: "Point", coordinates: [14.4848, 40.7462] },
+    category: "historical",
+  },
+
+  // Temple Stays
+  {
+    title: "Shaolin Kung Fu Retreat",
+    description:
+      "Train with warrior monks at the birthplace of Zen Buddhism and Chinese martial arts.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1584132960623-9d2edd287f10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHRlbXBsZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 120,
+    location: "Dengfeng",
+    country: "China",
+    geometry: { type: "Point", coordinates: [113.028, 34.4586] },
+    category: "temple-stays",
+  },
+
+  // Monasteries
+  {
+    title: "Himalayan Meditation Caves",
+    description:
+      "Ancient stone cells used by Buddhist monks for centuries. Includes guided Vipassana sessions.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1584132960623-9d2edd287f10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG1vbmFzdGVyeXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 55,
+    location: "Ladakh",
+    country: "India",
+    geometry: { type: "Point", coordinates: [77.5806, 34.1526] },
+    category: "monasteries",
+  },
+
+  // Castles
+  {
+    title: "Dracula's Fortress Rental",
+    description:
+      "Entire 14th-century Transylvanian castle. Includes dungeon tour and medieval banquet.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1584132960623-9d2edd287f10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNhc3RsZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 8900,
+    location: "Bran",
+    country: "Romania",
+    geometry: { type: "Point", coordinates: [25.3673, 45.5152] },
+    category: "castles",
+  },
+
+  // Camping
+  {
+    title: "Arctic Tundra Glamping",
+    description:
+      "Heated geodesic domes under Northern Lights with dog sledding expeditions.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1584132960623-9d2edd287f10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNhbXBpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 670,
+    location: "Lapland",
+    country: "Finland",
+    geometry: { type: "Point", coordinates: [26.9341, 67.9222] },
+    category: "camping",
+  },
+
+  // Safari
+  {
+    title: "Mobile Elephant Safari Camp",
+    description:
+      "Luxury tents that move with wildlife migration patterns. Professional trackers and biologists on staff.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1584132960623-9d2edd287f10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNhZmFyaXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 4500,
+    location: "Okavango Delta",
+    country: "Botswana",
+    geometry: { type: "Point", coordinates: [22.4594, -19.2804] },
+    category: "safari",
+  },
+
+  // Haunted Houses
+  {
+    title: "Abandoned Asylum Stay",
+    description:
+      "Overnight in decommissioned psychiatric hospital with paranormal investigation equipment provided.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1584132960623-9d2edd287f10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGhhdW50ZWR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 199,
+    location: "Pennsylvania",
+    country: "USA",
+    geometry: { type: "Point", coordinates: [-75.387, 40.0974] },
+    category: "haunted-houses",
+  },
+
+  // Floating House
+  {
+    title: "Solar-Powered Floating Pods",
+    description:
+      "High-tech water homes in sustainable floating community. Includes underwater observation lounge.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1584132960623-9d2edd287f10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGZsb2F0aW5nJTIwaG91c2V8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 2300,
+    location: "Maldives",
+    country: "Maldives",
+    geometry: { type: "Point", coordinates: [73.3288, 4.1755] },
+    category: "floating-house",
+  },
+
+  // Futuristic
+  {
+    title: "Neural-Link Smart Apartment",
+    description:
+      "Control entire living space with brain-computer interface. Includes VR fitness studio and robo-chef.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1584132960623-9d2edd287f10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGZ1dHVyaXN0aWN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 5500,
+    location: "Singapore",
+    country: "Singapore",
+    geometry: { type: "Point", coordinates: [103.8198, 1.3521] },
+    category: "futuristic",
+  },
+
+  // Underwater
+  {
+    title: "Abyssal Research Station",
+    description:
+      "Live 200m below sea level in this scientific habitat with daily deep-sea exploration missions.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1584132960623-9d2edd287f10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHVuZGVyd2F0ZXJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 12000,
+    location: "Great Barrier Reef",
+    country: "Australia",
+    geometry: { type: "Point", coordinates: [146.8333, -18.2833] },
+    category: "underwater",
+  },
+
+  // Budget-Friendly
+  {
+    title: "Converted Tram Car Hostel",
+    description:
+      "Retired city trams turned into cozy pods with shared kitchen facilities in urban garden setting.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1584132960623-9d2edd287f10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJ1ZGdldCUyMGhvc3RlbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 35,
+    location: "Lisbon",
+    country: "Portugal",
+    geometry: { type: "Point", coordinates: [-9.1426, 38.7223] },
+    category: "budget-friendly",
+  },
+
+  // Volcano View
+  {
+    title: "Lava Flow Observatory Suite",
+    description:
+      "Armored glass dome 500m from active volcano crater. Thermal imaging gear provided.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1584132960623-9d2edd287f10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHZvbGNhbm98ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 3200,
+    location: "Mount Etna",
+    country: "Italy",
+    geometry: { type: "Point", coordinates: [14.9955, 37.751] },
+    category: "volcano-view",
+  },
+
+  // Skyline View
+  {
+    title: "Rotating Penthouse Suite",
+    description:
+      "360-degree rotating luxury apartment with automated cocktail bar and infinity edge sky pool.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1584132960623-9d2edd287f10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNreWxpbmV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 8500,
+    location: "Shanghai",
+    country: "China",
+    geometry: { type: "Point", coordinates: [121.4737, 31.2304] },
+    category: "skyline-view",
+  },
+
+  // Ice Hotel
+  {
+    title: "Arctic Ice Sculpture Suite",
+    description:
+      "Newly carved each winter from glacier ice. Includes reindeer fur bedding and aurora wake-up service.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1584132960623-9d2edd287f10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGljZSUyMGhvdGVsfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 890,
+    location: "Kirkenes",
+    country: "Norway",
+    geometry: { type: "Point", coordinates: [30.0457, 69.7275] },
+    category: "ice-hotel",
+  },
+
+  // Cave Hotel
+  {
+    title: "Underground Winery Cave",
+    description:
+      "12th-century wine storage caves converted into luxury suites. Private wine tasting sessions included.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1584132960623-9d2edd287f10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNhdmUlMjBob3RlbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 2450,
+    location: "Bordeaux",
+    country: "France",
+    geometry: { type: "Point", coordinates: [-0.5792, 44.8378] },
+    category: "cave-hotel",
+  },
+
+  // Eco-Lodges
+  {
+    title: "Mycelium Mushroom Village",
+    description:
+      "Fully biodegradable structures grown from fungal mycelium. Carbon-negative operations.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1584132960623-9d2edd287f10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGVjb2xvZGdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 560,
+    location: "Costa Rica",
+    country: "Costa Rica",
+    geometry: { type: "Point", coordinates: [-84.1945, 9.7489] },
+    category: "eco-lodges",
+  },
+
+  // Wellness
+  {
+    title: "Floatation Therapy Resort",
+    description:
+      "Sensory deprivation tanks, IV vitamin therapy, and personalized sound healing sessions.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1584132960623-9d2edd287f10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHdlbGxuZXNzfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 3200,
+    location: "Sedona",
+    country: "USA",
+    geometry: { type: "Point", coordinates: [-111.761, 34.8697] },
+    category: "wellness",
+  },
+
+  // Off-Grid
+  {
+    title: "AI-Managed Survival Cabin",
+    description:
+      "Fully automated off-grid shelter with drone resupply system and EMP-proof electronics.",
+    image: {
+      filename: "listingimage",
+      url: "https://images.unsplash.com/photo-1584132960623-9d2edd287f10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG9mZiUyMGdyaWR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
+    },
+    price: 450,
+    location: "Yukon Territory",
+    country: "Canada",
+    geometry: { type: "Point", coordinates: [-135.0, 60.0] },
+    category: "off-grid",
   },
 ];
 
