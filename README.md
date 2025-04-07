@@ -1,5 +1,12 @@
 # 🌍 Voyage Vista
 
+![Render](https://img.shields.io/badge/Hosted%20on-Render-3f3f3f?logo=render&logoColor=white)
+![Node.js](https://img.shields.io/badge/Backend-Node.js-339933?logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Framework-Express.js-black?logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/Database-MongoDB-4ea94b?logo=mongodb&logoColor=white)
+![EJS](https://img.shields.io/badge/Templating-EJS-cc0000?logo=ejs&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Styling-TailwindCSS-38bdf8?logo=tailwindcss&logoColor=white)
+
 Welcome to **Voyage Vista** — a full-stack travel destination listing web application inspired by platforms like Airbnb! Users can explore, list, and review travel stays based on categories like mountains, deserts, farms, and more.
 
 🔗 **Live Website**: [https://voyage-vista-mx98.onrender.com](https://voyage-vista-mx98.onrender.com)
