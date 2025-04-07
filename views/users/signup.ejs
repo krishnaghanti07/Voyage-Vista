@@ -1,0 +1,110 @@
+<style>
+  /* Sign-Up Page Styles */
+  .signup-section {
+    min-height: 100vh;
+    background: linear-gradient(to right, #ffffff, #f7f7f7);
+    padding: 60px 20px;
+  }
+
+  .signup-card {
+    width: 100%;
+    max-width: 500px;
+    background-color: #ffffff;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 10px 30px rgba(245, 9, 9, 0.08);
+    transition: transform 0.3s ease;
+  }
+
+  .signup-card:hover {
+    transform: translateY(-6px);
+  }
+
+  .custom-input {
+    border-radius: 12px;
+    padding: 10px 14px;
+    border: 1px solid #d0d0d0;
+    transition: all 0.3s ease;
+  }
+
+  .custom-input:focus {
+    border-color: #fe424d;
+    box-shadow: 0 0 0 0.25rem rgba(254, 66, 77, 0.2);
+  }
+
+  .custom-btn {
+    background-color: #fe424d;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 0;
+    font-weight: 600;
+    color: white;
+    box-shadow: 0 5px 15px rgba(254, 66, 77, 0.3);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .custom-btn:hover {
+    background-color: #e63946;
+    transform: scale(1.02);
+  }
+
+  .brand-text {
+    color: #fe424d;
+  }
+</style>
+
+<% layout("/layouts/boilerplate") %>
+
+<div
+  class="container-fluid signup-section d-flex align-items-center justify-content-center"
+>
+  <div class="signup-card shadow p-5 rounded-4">
+    <h2 class="text-center mb-4 text-danger fw-bold">
+      Sign Up on <span class="brand-text">Voyage-Vista</span>
+    </h2>
+
+    <form action="/signup" method="POST" class="needs-validation" novalidate>
+      <!-- Username -->
+      <div class="mb-3">
+        <label for="username" class="form-label fw-medium">Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          class="form-control custom-input"
+          required
+        />
+        <div class="valid-feedback">Looks good!</div>
+        <div class="invalid-feedback">Please enter a username.</div>
+      </div>
+
+      <!-- Email -->
+      <div class="mb-3">
+        <label for="email" class="form-label fw-medium">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="form-control custom-input"
+          required
+        />
+        <div class="invalid-feedback">Please enter a valid email.</div>
+      </div>
+
+      <!-- Password -->
+      <div class="mb-4">
+        <label for="password" class="form-label fw-medium">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          class="form-control custom-input"
+          required
+        />
+        <div class="invalid-feedback">Please enter a password.</div>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" class="btn custom-btn w-100"><b>Sign Up</b></button>
+    </form>
+  </div>
+</div>

@@ -46,7 +46,7 @@ coverage/
 .vs/
 
 # EJS cached files
-*.ejs
+# *.ejs
 
 # Ignore package-lock.json and yarn.lock if using npm or yarn (depends on your preference)
 # Uncomment one of the below:

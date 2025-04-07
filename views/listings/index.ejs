@@ -1,0 +1,348 @@
+<% layout("/layouts/boilerplate") %>
+  
+  <style>
+    
+    #filter-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    #filters {
+        display: flex;
+        gap: 15px;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 10px 0;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        scroll-behavior: smooth;
+    }
+
+    #filters::-webkit-scrollbar {
+        display: none;
+    }
+
+    .filter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 100px;
+        padding: 10px;
+        text-decoration: none;
+        color: black;
+        border-radius: 8px;
+        opacity: 0.7;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .filter:hover {
+        opacity: 1;
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+
+    .filter i {
+        font-size: 24px;
+        color: #ff1020;
+        /* color: #fe424d; */
+    }
+
+    .filter p {
+        font-size: 0.8rem;
+        font-weight: bold;
+        margin-top: 5px;
+    }
+
+    /* Scroll Buttons */
+    .scroll-btn {
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.95);
+        border: none;
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease-in-out;
+        z-index: 10;
+    }
+
+    .scroll-btn i {
+        font-size: 20px;
+        color: #fe424d;
+    }
+
+    .scroll-btn:hover {
+        background-color: #fe424d;
+        transform: scale(1.1);
+    }
+
+    .scroll-btn:hover i {
+        color: white;
+    }
+
+    .scroll-left {
+        left: 2%;
+        display: none; /* Initially hidden */
+    }
+
+    .scroll-right {
+        right: 2%;
+        display: none; /* Initially hidden */
+    }
+
+    @media (max-width: 768px) {
+        .scroll-left {
+            left: 3%;
+        }
+        .scroll-right {
+            right: 3%;
+        }
+    }
+
+    /* No result handling */
+    .no-results-container {
+      height: 75vh; /* Covers most of the screen */
+      background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+      padding: 2rem;
+      border-radius: 20px;
+      margin: 2rem auto;
+    }
+
+  </style>
+
+  <div id="filter-container">
+    <button class="scroll-btn scroll-left"><i class="fa-solid fa-chevron-left"></i></button>
+    <div id="filters">
+      <!-- Popular & Trending -->
+      <a href="/listings?category=trending" class="filter">
+        <div><i class="fa-solid fa-fire"></i></div>
+        <p><b>Trending</b></p>
+      </a>
+    
+      <a href="/listings?category=luxury" class="filter">
+        <div><i class="fa-solid fa-gem"></i></div>
+        <p><b>Luxury Stays</b></p>
+      </a>
+    
+      <!-- Unique & Themed Stays -->
+      <a href="/listings?category=treehouse" class="filter">
+        <div><i class="fa-solid fa-tree"></i></div>
+        <p><b>Treehouses</b></p>
+      </a>
+    
+      <a href="/listings?category=boathouse" class="filter">
+        <div><i class="fa-solid fa-anchor"></i></div>
+        <p><b>Boathouses</b></p>
+      </a>
+    
+      <!-- Nature & Outdoor -->
+      <a href="/listings?category=mountains" class="filter">
+        <div><i class="fa-solid fa-mountain"></i></div>
+        <p><b>Mountains</b></p>
+      </a>
+    
+      <a href="/listings?category=forest" class="filter">
+        <div><i class="fa-solid fa-tree"></i></div>
+        <p><b>Forest Retreats</b></p>
+      </a>
+    
+      <a href="/listings?category=jungle-lodges" class="filter">
+        <div><i class="fa-solid fa-paw"></i></div>
+        <p><b>Jungle Lodges</b></p>
+      </a>
+    
+      <a href="/listings?category=desert" class="filter">
+        <div><i class="fa-solid fa-sun"></i></div>
+        <p><b>Desert Retreats</b></p>
+      </a>
+    
+      <a href="/listings?category=beachfront" class="filter">
+        <div><i class="fa-solid fa-umbrella-beach"></i></div>
+        <p><b>Beachfront</b></p>
+      </a>
+    
+      <a href="/listings?category=island" class="filter">
+        <div><i class="fa-solid fa-water"></i></div>
+        <p><b>Island Escapes</b></p>
+      </a>
+    
+      <!-- Cultural & Heritage -->
+      <a href="/listings?category=historical" class="filter">
+        <div><i class="fa-solid fa-landmark"></i></div>
+        <p><b>Historical Stays</b></p>
+      </a>
+    
+      <a href="/listings?category=temple-stays" class="filter">
+        <div><i class="fa-solid fa-place-of-worship"></i></div>
+        <p><b>Temple Stays</b></p>
+      </a>
+    
+      <a href="/listings?category=monasteries" class="filter">
+        <div><i class="fa-solid fa-praying-hands"></i></div>
+        <p><b>Monasteries</b></p>
+      </a>
+    
+      <a href="/listings?category=castles" class="filter">
+        <div><i class="fa-solid fa-chess-rook"></i></div>
+        <p><b>Castles</b></p>
+      </a>
+    
+      <!-- Adventure & Experience-Based -->
+      <a href="/listings?category=camping" class="filter">
+        <div><i class="fa-solid fa-campground"></i></div>
+        <p><b>Camping</b></p>
+      </a>
+    
+      <a href="/listings?category=safari" class="filter">
+        <div><i class="fa-solid fa-binoculars"></i></div>
+        <p><b>Safari Lodges</b></p>
+      </a>
+    
+      <a href="/listings?category=haunted-houses" class="filter">
+        <div><i class="fa-solid fa-ghost"></i></div>
+        <p><b>Haunted Houses</b></p>
+      </a>
+    
+      <a href="/listings?category=floating-house" class="filter">
+        <div><i class="fa-solid fa-ship"></i></div>
+        <p><b>Floating Houses</b></p>
+      </a>
+    
+      <a href="/listings?category=futuristic" class="filter">
+        <div><i class="fa-solid fa-robot"></i></div>
+        <p><b>Futuristic Stays</b></p>
+      </a>
+    
+      <a href="/listings?category=underwater" class="filter">
+        <div><i class="fa-solid fa-fish"></i></div>
+        <p><b>Underwater</b></p>
+      </a>
+    
+      <a href="/listings?category=budget-friendly" class="filter">
+        <div><i class="fa-solid fa-wallet"></i></div>
+        <p><b>Budget-Friendly</b></p>
+      </a>
+    
+      <a href="/listings?category=volcano-view" class="filter">
+        <div><i class="fa-solid fa-volcano"></i></div>
+        <p><b>Volcano View</b></p>
+      </a>
+    
+      <a href="/listings?category=skyline-view" class="filter">
+        <div><i class="fa-solid fa-building"></i></div>
+        <p><b>Skyline View</b></p>
+      </a>
+    
+      <a href="/listings?category=ice-hotel" class="filter">
+        <div><i class="fa-solid fa-snowflake"></i></div>
+        <p><b>Ice Hotels</b></p>
+      </a>
+    
+      <a href="/listings?category=cave-hotel" class="filter">
+        <div><i class="fa-solid fa-mountain"></i></div>
+        <p><b>Cave Hotels</b></p>
+      </a>
+    
+      <!-- Sustainability & Wellness -->
+      <a href="/listings?category=eco-lodges" class="filter">
+        <div><i class="fa-solid fa-leaf"></i></div>
+        <p><b>Eco Lodges</b></p>
+      </a>
+    
+      <a href="/listings?category=wellness" class="filter">
+        <div><i class="fa-solid fa-spa"></i></div>
+        <p><b>Wellness</b></p>
+      </a>
+    
+      <a href="/listings?category=off-grid" class="filter">
+        <div><i class="fa-solid fa-signs-post"></i></div>
+        <p><b>Off-Grid Get</b></p>
+      </a>
+    </div>
+    <button class="scroll-btn scroll-right"><i class="fa-solid fa-chevron-right"></i></button>
+  </div>
+
+  <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
+    <% for(listing of allListings) { %>
+    <a href="/listings/<%= listing._id %>" class="listing-link">
+      <div class="card col listing-card">
+        <img
+          src="<%= listing.image.url %>"
+          class="card-img-top"
+          alt="listing_image"
+          style="height: 20rem"
+        />
+        <div class="card-img-overlay"></div>
+        <div class="card-body">
+          <p class="card-text">
+            <b><%= listing.title %></b> <br />
+            &#8377; <%= listing.price.toLocaleString("en-IN") %> / night
+          </p>
+        </div>
+      </div>
+    </a>
+    <% } %>
+
+    <!-- No result Handling -->
+    <% if (allListings.length === 0) { %>
+      <div class="no-results-container d-flex justify-content-center align-items-center">
+        <div class="text-center">
+          <h1 style="color: #ff1020;"><b>OOps..!!😓😓</b></h1>
+          <h2 class="text-danger fw-bold mb-3">
+            <i class="fa fa-search-minus me-2"></i> No Results Found!
+          </h2>
+          <p class="fs-5 text-muted">
+            Oops! We couldn't find any destinations for "<span class="fw-bold text-dark"><%= q %></span>".<br />
+            Try searching with different keywords or explore another category.
+          </p>
+          <a href="/listings" class="btn btn-outline-danger mt-4 rounded-pill px-4 py-2">
+            🔍 Explore All Listings
+          </a>
+        </div>
+      </div>    
+    <% } %>
+    
+  </div>
+
+  <script>
+    
+    document.addEventListener("DOMContentLoaded", function () {
+      const filters = document.getElementById("filters");
+      const leftBtn = document.querySelector(".scroll-left");
+      const rightBtn = document.querySelector(".scroll-right");
+
+      // Scroll left
+      leftBtn.addEventListener("click", () => {
+          filters.scrollBy({ left: -200, behavior: "smooth" });
+      });
+
+      // Scroll right
+      rightBtn.addEventListener("click", () => {
+          filters.scrollBy({ left: 200, behavior: "smooth" });
+      });
+
+      // Function to update visibility of scroll buttons
+      function updateButtons() {
+          leftBtn.style.display = filters.scrollLeft > 0 ? "flex" : "none";
+          rightBtn.style.display = 
+              filters.scrollLeft + filters.clientWidth >= filters.scrollWidth - 1 ? "none" : "flex";
+      }
+
+      // Listen for scrolling and window resizing
+      filters.addEventListener("scroll", updateButtons);
+      window.addEventListener("resize", updateButtons);
+
+      // Initial check on page load
+      updateButtons();
+    });
+
+  </script>

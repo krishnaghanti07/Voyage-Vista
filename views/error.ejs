@@ -1,0 +1,47 @@
+<% layout("/layouts/boilerplate") %>
+
+<style>
+    .custom-error-box {
+        background-color: #fff;
+        border: 2px solid #fe424d;
+        border-left: 8px solid #fe424d;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        animation: slideDownFade 0.7s ease;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .custom-error-box:hover {
+        transform: scale(1.02);
+    }
+
+    .custom-error-text {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #fe424d;
+        text-align: center;
+    }
+
+    @keyframes slideDownFade {
+        0% {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+
+<div class="row mt-5 mb-5 justify-content-center">
+    <div class="col-md-6">
+        <div class="custom-error-box text-center">
+            <div class="custom-error-text">
+                <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                <%= message %>
+            </div>
+        </div>
+    </div>
+</div>

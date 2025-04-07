@@ -1,0 +1,189 @@
+<style>
+  /* New Listing Page Styling */
+  .new-listing-section {
+    min-height: 100vh;
+    background: linear-gradient(to right, #ffffff, #f8f9fa);
+    padding: 60px 20px;
+  }
+
+  .listing-card {
+    max-width: 800px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .listing-card:hover {
+    transform: translateY(-6px);
+  }
+
+  .custom-input {
+    border-radius: 12px;
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+  }
+
+  .custom-input:focus {
+    border-color: #fe424d;
+    box-shadow: 0 0 0 0.25rem rgba(254, 66, 77, 0.2);
+  }
+
+  .custom-btn {
+    background-color: #fe424d;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 0;
+    font-weight: 600;
+    color: white;
+    box-shadow: 0 5px 15px rgba(254, 66, 77, 0.3);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .custom-btn:hover {
+    background-color: #e63b3f;
+    transform: scale(1.02);
+  }
+</style>
+
+<% layout("/layouts/boilerplate") %>
+
+<div
+  class="container-fluid new-listing-section d-flex align-items-center justify-content-center"
+>
+  <div class="listing-card shadow p-5 rounded-4 w-100">
+    <h3 class="text-center mb-4 text-danger fw-bold">Create a New Listing</h3>
+
+    <form
+      method="POST"
+      action="/listings"
+      class="needs-validation"
+      novalidate
+      enctype="multipart/form-data"
+    >
+      <!-- Title -->
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input
+          type="text"
+          name="listing[title]"
+          placeholder="Add a Catchy Title..."
+          class="form-control custom-input"
+          required
+        />
+        <div class="valid-feedback">Title looks good..!</div>
+        <div class="invalid-feedback">Please enter a suitable title..!</div>
+      </div>
+
+      <!-- Description -->
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea
+          name="listing[description]"
+          placeholder="Enter Description..."
+          class="form-control custom-input"
+          rows="4"
+          required
+        ></textarea>
+        <div class="invalid-feedback">Please enter a short description..!</div>
+      </div>
+
+      <!-- Image Upload + Category -->
+      <div class="row">
+        <div class="mb-3 col-md-8">
+          <label for="image" class="form-label">Upload Listing Image</label>
+          <input
+            type="file"
+            name="listing[image]"
+            class="form-control custom-input"
+            required
+          />
+        </div>
+
+        <div class="mb-3 col-md-4">
+          <label for="category" class="form-label">Category</label>
+          <select
+            name="listing[category]"
+            class="form-select custom-input"
+            required
+          >
+            <option value="" disabled selected>Select a category...</option>
+            <!-- Keep all your existing category options here -->
+            <option value="trending">Trending</option>
+            <option value="luxury">Luxury Stays</option>
+            <option value="treehouse">Treehouses</option>
+            <option value="boathouse">Boathouses</option>
+            <option value="mountains">Mountains</option>
+            <option value="forest">Forest Retreats</option>
+            <option value="jungle-lodges">Jungle Lodges</option>
+            <option value="desert">Desert Retreats</option>
+            <option value="beachfront">Beachfront</option>
+            <option value="island">Island Escapes</option>
+            <option value="historical">Historical Stays</option>
+            <option value="temple-stays">Temple Stays</option>
+            <option value="monasteries">Monasteries</option>
+            <option value="castles">Castles</option>
+            <option value="camping">Camping</option>
+            <option value="safari">Safari Lodges</option>
+            <option value="haunted-houses">Haunted Houses</option>
+            <option value="floating-house">Floating Houses</option>
+            <option value="futuristic">Futuristic Stays</option>
+            <option value="underwater">Underwater</option>
+            <option value="budget-friendly">Budget-Friendly</option>
+            <option value="volcano-view">Volcano View</option>
+            <option value="skyline-view">Skyline View</option>
+            <option value="ice-hotel">Ice Hotels</option>
+            <option value="cave-hotel">Cave Hotels</option>
+            <option value="eco-lodges">Eco Lodges</option>
+            <option value="wellness">Wellness</option>
+            <option value="off-grid">Off-Grid Get</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Price + Country -->
+      <div class="row">
+        <div class="mb-3 col-md-4">
+          <label for="price" class="form-label">Price</label>
+          <input
+            type="number"
+            name="listing[price]"
+            placeholder="Enter Price..."
+            class="form-control custom-input"
+            required
+          />
+          <div class="invalid-feedback">Price should be valid..!</div>
+        </div>
+
+        <div class="mb-3 col-md-8">
+          <label for="country" class="form-label">Country</label>
+          <input
+            type="text"
+            name="listing[country]"
+            placeholder="Enter Country..."
+            class="form-control custom-input"
+            required
+          />
+          <div class="invalid-feedback">Country should be valid..!</div>
+        </div>
+      </div>
+
+      <!-- Location -->
+      <div class="mb-3">
+        <label for="location" class="form-label">Location</label>
+        <input
+          type="text"
+          name="listing[location]"
+          placeholder="Enter Location..."
+          class="form-control custom-input"
+          required
+        />
+        <div class="invalid-feedback">Location should be valid..!</div>
+      </div>
+
+      <!-- Submit -->
+      <button class="btn custom-btn w-100">Add Listing</button>
+    </form>
+  </div>
+</div>
