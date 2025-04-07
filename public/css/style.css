@@ -25,6 +25,33 @@ body {
 
 }
 
+/* Collapse area styling on small screens */
+@media (max-width: 768px) {
+    .navbar-collapse {
+      background-color: white;
+      padding: 1rem;
+      z-index: 999; /* Ensures it's on top of content but doesn't interfere */
+      position: relative; /* keeps it within navbar flow */
+    }
+  
+    .navbar-nav {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+  
+    .search-box-wrapper {
+      width: 100%;
+      margin-top: 0.5rem;
+    }
+  
+    .search-form {
+      width: 100%;
+    }
+}
+.navbar-collapse {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+   
 /* Footer */
 .f-info-links a {
     text-decoration: none;

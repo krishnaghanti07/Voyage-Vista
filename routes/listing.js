@@ -26,22 +26,23 @@ router
 router.get("/new", isLoggedIn, listingController.renderNewForm);
 
 router
-  .route("/:id")  // Show Route
-  .get(wrapAsync(listingController.showListing))
-  .put(  // Update Route
-    isLoggedIn,
-    isOwner,
-    upload.single('listing[image]'),
-    validateListing,
-    wrapAsync(listingController.updateListing)
-  )  // Delete Route
-  .delete(isLoggedIn, isOwner, wrapAsync(listingController.destroyListing));
+.route("/:id")  // Show Route
+.get(wrapAsync(listingController.showListing))
+.put(  // Update Route
+  isLoggedIn,
+  isOwner,
+  upload.single('listing[image]'),
+  validateListing,
+  wrapAsync(listingController.updateListing)
+)  // Delete Route
+.delete(isLoggedIn, isOwner, wrapAsync(listingController.destroyListing));
 
 // Edit Route
 router.get(
   "/:id/edit",
   isLoggedIn,
   isOwner,
+  // wrapAsync(listingController.renderEditForm)
   wrapAsync(listingController.renderEditForm)
 );
 

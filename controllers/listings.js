@@ -4,26 +4,35 @@ const mapToken = process.env.MAP_TOKEN;
 const geocodingClient = mbxGeocoding({ accessToken: mapToken });
 
 module.exports.index = async (req, res) => {
-  const { category } = req.query; // Extract category from query params
-  let filter = {}; // Default: No filter applied
+  const { category, q } = req.query;
 
+  let filter = {};
+
+  // Apply category filter if selected
   if (category) {
-      filter.category = category; // Apply filter only if category is selected
+    filter.category = category;
   }
 
-  // console.log(filter);
-  let allListings = await Listing.find(filter); // Fetch listings based on filter
-
-  // If no listings are found, fetch all listings instead
-  if (allListings.length === 0) {
-      allListings = await Listing.find({});
+  // Apply search filter if query exists
+  if (q) {
+    // Add $or condition to filter object for search logic
+    filter.$or = [
+      { title: { $regex: q, $options: "i" } },
+      { location: { $regex: q, $options: "i" } },
+      { country: { $regex: q, $options: "i" } }
+    ];
   }
 
-  res.render("listings/index.ejs", { allListings });
+  let allListings = await Listing.find(filter);
 
-  // let allListings = await Listing.find({});
-  // res.render("listings/index.ejs", { allListings });
+  // Optional fallback: If no results and a search query was used, return all
+  // if (allListings.length === 0 && q) {
+  //   allListings = await Listing.find({});
+  // }
+
+  res.render("listings/index.ejs", { allListings, q, category });
 };
+
 
 module.exports.renderNewForm = (req, res) => {
   // console.log(req.user);
@@ -74,6 +83,23 @@ module.exports.createListing = async (req, res, next) => {
   res.redirect("/listings");  
 
 };
+
+module.exports.renderEditForm = async (req, res) => {
+  const { id } = req.params;
+  const listing = await Listing.findById(id);
+
+  if (!listing) {
+    req.flash("error", "Listing you requested for does not exist..!");
+    return res.redirect("/listings");
+  }
+
+  // Pass the image URL from the listing
+  const originalImageUrl = listing.image?.url || "/path/to/default.jpg"; // fallback if no image
+
+  res.render("listings/edit.ejs", { listing, originalImageUrl });
+};
+
+
 
 module.exports.updateListing = async (req, res) => {
   //   if (!req.body.listing) {
